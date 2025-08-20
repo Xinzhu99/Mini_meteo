@@ -32,33 +32,6 @@ const fetchWeather = async (lat, lon) => {
 
 };
 
-// const fetchRecentWeather = async (lat, lon) => {
-    
-//         const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,precipitation&past_days=2`);
-//         const data = await response.json();
-//         return data.hourly; //retourner un objet hourly contenant 2 tableaux : time et temperature_2m
-
-// }
-
-// const renderHourlyChart = async (hour, temps) => {
-//     const ctx = document.querySelector("#myChart").getContext("2d"); //on récupère le contexte 2D du canvas mychart
-
-//     if (chartInstance){ //chartInstance est une variable globale pour stocker le graphique actuel 
-//         chartInstance.destroy();
-//     };
-
-//     chartInstance = new Chart (ctx, {
-//         type:"line", //graphique en courbe
-//         data:{
-//             labels: timestamps,
-//             datasets: temps,
-//         }
-//     })
-// }
-
-
-
-
 const showData = async () => {
     const coordinatesData = await fetchCoordinates(cityInput.value);
     if (coordinatesData[0]) {
@@ -86,8 +59,5 @@ button.addEventListener("click", () => {
     city.textContent = `${uppercaseCity}`;
 
     showData();
-
-    
-
 });
 
