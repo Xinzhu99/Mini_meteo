@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Station Météo</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+
+</head>
+<body>
+    <div class="weather-container">
+        <div class="city-search">
+            <input type="text" id="cityInput" placeholder="Entrez un nom de ville">
+            <button id="btn">OK</button>
+        </div>
+        <h1 id="city"></h1>
+        <div id="gps"></div>
+        <div id="temperature">-°C</div>
+        <div id="humidity">Mise à jour en cours...</div>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="myChart">
+
+        </canvas>
+    </div>
+
+</body>
+</html>
