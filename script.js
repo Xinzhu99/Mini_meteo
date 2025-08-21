@@ -46,7 +46,6 @@ const showData = async () => {
         temperature.textContent = `${degrees}°C`;
         humidity.textContent = `Humidité : ${relativeHumidity}%`;
 
-        fetchRecentWeather(lat,lon);
     } else {
         city.textContent = "Ville non trouvée"
     };
